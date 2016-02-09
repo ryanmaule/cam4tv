@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9400120B1C6980E400931422 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9400120A1C6980E400931422 /* AuthViewController.swift */; };
+		943F21671BF0127D0066D5F5 /* CamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F21661BF0127D0066D5F5 /* CamCell.swift */; };
+		943F216B1BF02DC00066D5F5 /* Cam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F216A1BF02DC00066D5F5 /* Cam.swift */; };
 		94AF93751BEECCE8009BAACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93741BEECCE8009BAACF /* AppDelegate.swift */; };
 		94AF93771BEECCE8009BAACF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93761BEECCE8009BAACF /* ViewController.swift */; };
 		94AF937A1BEECCE8009BAACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94AF93781BEECCE8009BAACF /* Main.storyboard */; };
 		94AF937C1BEECCE8009BAACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94AF937B1BEECCE8009BAACF /* Assets.xcassets */; };
 		94AF93871BEECCE8009BAACF /* CAM4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93861BEECCE8009BAACF /* CAM4Tests.swift */; };
 		94AF93921BEECCE8009BAACF /* CAM4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93911BEECCE8009BAACF /* CAM4UITests.swift */; };
+		94DBFB461C3737A300709278 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBFB451C3737A300709278 /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9400120A1C6980E400931422 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		943F21661BF0127D0066D5F5 /* CamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamCell.swift; sourceTree = "<group>"; };
+		943F216A1BF02DC00066D5F5 /* Cam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cam.swift; sourceTree = "<group>"; };
 		94AF93711BEECCE8009BAACF /* CAM4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAM4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94AF93741BEECCE8009BAACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94AF93761BEECCE8009BAACF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +52,7 @@
 		94AF938D1BEECCE8009BAACF /* CAM4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAM4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94AF93911BEECCE8009BAACF /* CAM4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAM4UITests.swift; sourceTree = "<group>"; };
 		94AF93931BEECCE8009BAACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94DBFB451C3737A300709278 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +106,12 @@
 				94AF93741BEECCE8009BAACF /* AppDelegate.swift */,
 				94AF93761BEECCE8009BAACF /* ViewController.swift */,
 				94AF93781BEECCE8009BAACF /* Main.storyboard */,
+				9400120A1C6980E400931422 /* AuthViewController.swift */,
+				94DBFB451C3737A300709278 /* PlayerViewController.swift */,
+				943F21661BF0127D0066D5F5 /* CamCell.swift */,
 				94AF937B1BEECCE8009BAACF /* Assets.xcassets */,
 				94AF937D1BEECCE8009BAACF /* Info.plist */,
+				943F216A1BF02DC00066D5F5 /* Cam.swift */,
 			);
 			path = CAM4;
 			sourceTree = "<group>";
@@ -190,6 +202,7 @@
 				TargetAttributes = {
 					94AF93701BEECCE8009BAACF = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = PK895FYN6P;
 					};
 					94AF93811BEECCE8009BAACF = {
 						CreatedOnToolsVersion = 7.1;
@@ -253,7 +266,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94AF93771BEECCE8009BAACF /* ViewController.swift in Sources */,
+				943F216B1BF02DC00066D5F5 /* Cam.swift in Sources */,
 				94AF93751BEECCE8009BAACF /* AppDelegate.swift in Sources */,
+				943F21671BF0127D0066D5F5 /* CamCell.swift in Sources */,
+				9400120B1C6980E400931422 /* AuthViewController.swift in Sources */,
+				94DBFB461C3737A300709278 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,10 +403,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CAM4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ryanmaule.CAM4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cam4.tv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -398,10 +418,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CAM4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ryanmaule.CAM4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cam4.tv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -472,6 +495,7 @@
 				94AF93981BEECCE8009BAACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94AF93991BEECCE8009BAACF /* Build configuration list for PBXNativeTarget "CAM4Tests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +504,7 @@
 				94AF939B1BEECCE8009BAACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94AF939C1BEECCE8009BAACF /* Build configuration list for PBXNativeTarget "CAM4UITests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +513,7 @@
 				94AF939E1BEECCE8009BAACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
