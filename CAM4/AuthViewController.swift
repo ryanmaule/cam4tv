@@ -16,6 +16,8 @@ class AuthViewController: UIViewController {
     let URL_GENERATE_AUTH_CODE = "http://dylan.ryanmaule.com/cam4tv/api/devices/generate.php"
     let URL_POLL_AUTH_CODE = "http://dylan.ryanmaule.com/cam4tv/api/devices/poll.php"
     
+    @IBOutlet weak var AuthCodeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -36,8 +38,11 @@ class AuthViewController: UIViewController {
             }
             else {
                 do {
-                    let dict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
-                    print(dict)
+                    let results = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
+                    print(results)
+                    //if let auth_code = results!["auth_code"] as! String? {
+                    //    self.AuthCodeLabel.text = auth_code
+                    //}
                 }
                 catch {
                     print("downloadData Error: dict Issue")
