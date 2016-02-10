@@ -45,7 +45,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.getLocation()
+        // Show Setup
+        setupApp()
+        
+        //self.getLocation()
         
         trendingCollectionView.delegate = self
         trendingCollectionView.dataSource = self
@@ -56,9 +59,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Set timer to refresh data
         self.update()
         NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "update", userInfo: nil, repeats: true)
-        
-        // Show Setup
-        setupApp()
     }
     
     func setupApp() {

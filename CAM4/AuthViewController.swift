@@ -22,6 +22,8 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // 1. Check for authorization before running downloadData
+        // poll()
         downloadData(URL_GENERATE_AUTH_CODE)
     }
     
@@ -39,10 +41,17 @@ class AuthViewController: UIViewController {
             else {
                 do {
                     let results = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
-                    print(results)
-                    //if let auth_code = results!["auth_code"] as! String? {
-                    //    self.AuthCodeLabel.text = auth_code
-                    //}
+                    let auth_code = results!["auth_code"] as! String?
+                    
+                    // 2. This can't go here
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.AuthCodeLabel.text = auth_code
+                        
+                        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "poll", userInfo: nil, repeats: true)
+                        
+                        // 3. When authorized, load the main view
+                        
+                    }
                 }
                 catch {
                     print("downloadData Error: dict Issue")
@@ -50,6 +59,10 @@ class AuthViewController: UIViewController {
             }
         }
         task.resume()
+    }
+    
+    func poll() {
+        downloadData(URL_POLL_AUTH_CODE)
     }
     
 }
