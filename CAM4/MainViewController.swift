@@ -46,7 +46,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Do any additional setup after loading the view, typically from a nib.
         
         // Show Setup
-        setupApp()
+        //setupApp()
         
         //self.getLocation()
         
@@ -63,7 +63,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func setupApp() {
         if let authController = storyboard!.instantiateViewControllerWithIdentifier("AuthViewController") as? AuthViewController {
-            presentViewController(authController, animated: true, completion: nil)
+            self.presentViewController(authController, animated: true, completion: nil)
+            self.dismissViewControllerAnimated(false, completion: nil)
         }
     }
     

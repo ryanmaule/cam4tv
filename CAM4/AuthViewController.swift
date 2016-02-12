@@ -76,6 +76,7 @@ class AuthViewController: UIViewController {
                     // Display the Main View Controller
                     if let mainViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MainViewController") as? MainViewController {
                         self.presentViewController(mainViewController, animated: true, completion: nil)
+                        self.dismissViewControllerAnimated(false, completion: nil)
                     }
                 }
                 else {
