@@ -11,7 +11,7 @@
 		943F21671BF0127D0066D5F5 /* CamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F21661BF0127D0066D5F5 /* CamCell.swift */; };
 		943F216B1BF02DC00066D5F5 /* Cam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F216A1BF02DC00066D5F5 /* Cam.swift */; };
 		94AF93751BEECCE8009BAACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93741BEECCE8009BAACF /* AppDelegate.swift */; };
-		94AF93771BEECCE8009BAACF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93761BEECCE8009BAACF /* ViewController.swift */; };
+		94AF93771BEECCE8009BAACF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93761BEECCE8009BAACF /* MainViewController.swift */; };
 		94AF937A1BEECCE8009BAACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94AF93781BEECCE8009BAACF /* Main.storyboard */; };
 		94AF937C1BEECCE8009BAACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94AF937B1BEECCE8009BAACF /* Assets.xcassets */; };
 		94AF93871BEECCE8009BAACF /* CAM4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93861BEECCE8009BAACF /* CAM4Tests.swift */; };
@@ -42,7 +42,7 @@
 		943F216A1BF02DC00066D5F5 /* Cam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cam.swift; sourceTree = "<group>"; };
 		94AF93711BEECCE8009BAACF /* CAM4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAM4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94AF93741BEECCE8009BAACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94AF93761BEECCE8009BAACF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94AF93761BEECCE8009BAACF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		94AF93791BEECCE8009BAACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94AF937B1BEECCE8009BAACF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94AF937D1BEECCE8009BAACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				94AF93741BEECCE8009BAACF /* AppDelegate.swift */,
-				94AF93761BEECCE8009BAACF /* ViewController.swift */,
+				94AF93761BEECCE8009BAACF /* MainViewController.swift */,
 				94AF93781BEECCE8009BAACF /* Main.storyboard */,
 				9400120A1C6980E400931422 /* AuthViewController.swift */,
 				94DBFB451C3737A300709278 /* PlayerViewController.swift */,
@@ -265,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94AF93771BEECCE8009BAACF /* ViewController.swift in Sources */,
+				94AF93771BEECCE8009BAACF /* MainViewController.swift in Sources */,
 				943F216B1BF02DC00066D5F5 /* Cam.swift in Sources */,
 				94AF93751BEECCE8009BAACF /* AppDelegate.swift in Sources */,
 				943F21671BF0127D0066D5F5 /* CamCell.swift in Sources */,

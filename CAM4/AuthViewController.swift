@@ -18,16 +18,25 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var AuthCodeLabel: UILabel!
     
+    var auth_code = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // 1. Check for authorization before running downloadData
-        // poll()
-        downloadData(URL_GENERATE_AUTH_CODE)
+        // Check for authorization in case it's already done
+        self.poll()
+        // Generate an auth code
+        self.downloadData(URL_GENERATE_AUTH_CODE, callback:{ (results)->Void in
+            self.auth_code = (results["auth_code"] as! String?)!
+            
+            // Respond by setting the auth code and initiating polling loop
+            self.AuthCodeLabel.text = self.auth_code
+            NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "poll", userInfo: nil, repeats: true)
+        })
     }
     
-    func downloadData(input_url: String) {
+    func downloadData(input_url: String, callback: (Dictionary<String, AnyObject>)->()) {
         let url = NSURL(string: input_url)!
         let request = NSURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
@@ -41,16 +50,10 @@ class AuthViewController: UIViewController {
             else {
                 do {
                     let results = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
-                    let auth_code = results!["auth_code"] as! String?
-                    
-                    // 2. This can't go here
+                    // Execute callback
                     dispatch_async(dispatch_get_main_queue()) {
-                        self.AuthCodeLabel.text = auth_code
-                        
-                        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "poll", userInfo: nil, repeats: true)
-                        
-                        // 3. When authorized, load the main view
-                        
+                        print(results)
+                        callback(results!)
                     }
                 }
                 catch {
@@ -62,7 +65,27 @@ class AuthViewController: UIViewController {
     }
     
     func poll() {
-        downloadData(URL_POLL_AUTH_CODE)
+        let poll_url = URL_POLL_AUTH_CODE+"?auth_code="+self.auth_code
+        print(poll_url)
+        // Check if auth code is authorized
+        downloadData(poll_url, callback:{ (results)->Void in
+            if (results["success"] != nil) {
+                let success = results["success"] as! Bool
+                if success {
+                    print("Success")
+                    // Display the Main View Controller
+                    if let mainViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MainViewController") as? MainViewController {
+                        self.presentViewController(mainViewController, animated: true, completion: nil)
+                    }
+                }
+                else {
+                    print("Not Authorized")
+                }
+            }
+            else {
+                print("API Error")
+            }
+        })
     }
     
 }

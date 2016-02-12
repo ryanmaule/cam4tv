@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  CAM4
 //
 //  Created by ryan on 2015-11-08.
@@ -18,7 +18,7 @@ import AVKit
 import AVFoundation
 import CoreLocation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate {
+class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate {
     
     @IBOutlet weak var trendingCollectionView: UICollectionView!
     @IBOutlet weak var localCollectionView: UICollectionView!
