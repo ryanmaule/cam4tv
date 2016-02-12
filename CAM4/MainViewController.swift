@@ -62,10 +62,12 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func setupApp() {
+        /*
         if let authController = storyboard!.instantiateViewControllerWithIdentifier("AuthViewController") as? AuthViewController {
             self.presentViewController(authController, animated: true, completion: nil)
-            self.dismissViewControllerAnimated(false, completion: nil)
+            //self.dismissViewControllerAnimated(false, completion: nil)
         }
+        */
     }
     
     func getLocation() {

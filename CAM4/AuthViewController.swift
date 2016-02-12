@@ -19,6 +19,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var AuthCodeLabel: UILabel!
     
     var auth_code = ""
+    var poll_timer = NSTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class AuthViewController: UIViewController {
             
             // Respond by setting the auth code and initiating polling loop
             self.AuthCodeLabel.text = self.auth_code
-            NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "poll", userInfo: nil, repeats: true)
+            self.poll_timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "poll", userInfo: nil, repeats: true)
         })
     }
     
@@ -76,7 +77,10 @@ class AuthViewController: UIViewController {
                     // Display the Main View Controller
                     if let mainViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MainViewController") as? MainViewController {
                         self.presentViewController(mainViewController, animated: true, completion: nil)
-                        self.dismissViewControllerAnimated(false, completion: nil)
+                        //self.dismissViewControllerAnimated(false, completion: nil)
+                        
+                        // Stop the poll()
+                        self.poll_timer.invalidate()
                     }
                 }
                 else {
