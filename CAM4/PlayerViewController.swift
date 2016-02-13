@@ -14,11 +14,14 @@ import AVFoundation
 class PlayerViewController: UIViewController {
 
     var username = "username"
+    let pubnub_url = "http://dylan.ryanmaule.com/cam4tv/api/devices/session.php"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupCam(self.username)
+
+        downloadData(self.pubnub_url+"?current_view="+self.username+"&auth_code="+auth_code)
     }
     
     func setupCam(username: String) {
@@ -98,6 +101,35 @@ class PlayerViewController: UIViewController {
         self.view.addSubview(overlayView)
         
         player.play()
+    }
+    
+    func downloadData(input_url: String) {
+        let url = NSURL(string: input_url)!
+        let request = NSURLRequest(URL: url)
+        let session = NSURLSession.sharedSession()
+        
+        print(input_url)
+        
+        let task = session.dataTaskWithRequest(request) { (data, response, error) ->
+            Void in
+            
+            if error != nil {
+                print("downloadData Error: " + error.debugDescription)
+            }
+            else {
+                do {
+                    let results = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
+                    // Execute callback
+                    dispatch_async(dispatch_get_main_queue()) {
+                        print(results)
+                    }
+                }
+                catch {
+                    print("downloadData Error: dict Issue")
+                }
+            }
+        }
+        task.resume()
     }
     
 }

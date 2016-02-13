@@ -11,6 +11,8 @@ import UIKit
 import AVKit
 import AVFoundation
 
+var auth_code = ""
+
 class AuthViewController: UIViewController {
     
     let URL_GENERATE_AUTH_CODE = "http://dylan.ryanmaule.com/cam4tv/api/devices/generate.php"
@@ -18,7 +20,6 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var AuthCodeLabel: UILabel!
     
-    var auth_code = ""
     var poll_timer = NSTimer()
     
     override func viewDidLoad() {
@@ -29,10 +30,10 @@ class AuthViewController: UIViewController {
         self.poll()
         // Generate an auth code
         self.downloadData(URL_GENERATE_AUTH_CODE, callback:{ (results)->Void in
-            self.auth_code = (results["auth_code"] as! String?)!
+            auth_code = (results["auth_code"] as! String?)!
             
             // Respond by setting the auth code and initiating polling loop
-            self.AuthCodeLabel.text = self.auth_code
+            self.AuthCodeLabel.text = auth_code
             self.poll_timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "poll", userInfo: nil, repeats: true)
         })
     }
@@ -66,7 +67,7 @@ class AuthViewController: UIViewController {
     }
     
     func poll() {
-        let poll_url = URL_POLL_AUTH_CODE+"?auth_code="+self.auth_code
+        let poll_url = URL_POLL_AUTH_CODE+"?auth_code="+auth_code
         print(poll_url)
         // Check if auth code is authorized
         downloadData(poll_url, callback:{ (results)->Void in

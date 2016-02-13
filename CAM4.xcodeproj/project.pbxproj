@@ -53,7 +53,6 @@
 		94AF93911BEECCE8009BAACF /* CAM4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAM4UITests.swift; sourceTree = "<group>"; };
 		94AF93931BEECCE8009BAACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DBFB451C3737A300709278 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
-		EAF626207ABA726FA05A4FBB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +83,6 @@
 		4169D894F4FDF64DE4D7677D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EAF626207ABA726FA05A4FBB /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
