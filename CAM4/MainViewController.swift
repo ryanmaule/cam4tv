@@ -48,6 +48,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Show Setup
         //setupApp()
         
+        // Initiate GEO for local results
         //self.getLocation()
         
         trendingCollectionView.delegate = self
@@ -63,6 +64,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func setupApp() {
         /*
+        Use seque instead
+        
         if let authController = storyboard!.instantiateViewControllerWithIdentifier("AuthViewController") as? AuthViewController {
             self.presentViewController(authController, animated: true, completion: nil)
             //self.dismissViewControllerAnimated(false, completion: nil)

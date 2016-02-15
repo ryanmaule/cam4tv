@@ -10,16 +10,26 @@ import Foundation
 import UIKit
 import AVKit
 import AVFoundation
+import Firebase
 
 class PlayerViewController: UIViewController {
 
     var username = "username"
     let pubnub_url = "http://dylan.ryanmaule.com/cam4tv/api/devices/session.php"
+    let firebase_url = "http://dylan.ryanmaule.com/cam4tv/api/chat/cam4.php?room="
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupCam(self.username)
+        
+        /*
+        downloadFirebaseConfig(firebase_url+self.username, callback: { (results)->Void in
+                let firebase_stream_url = (results["url"] as! String?)!
+                self.streamChat(firebase_stream_url)
+            }
+        )
+        */
 
         downloadData(self.pubnub_url+"?current_view="+self.username+"&auth_code="+auth_code)
     }
@@ -130,6 +140,49 @@ class PlayerViewController: UIViewController {
             }
         }
         task.resume()
+    }
+    
+    func downloadFirebaseConfig(input_url: String, callback: (Dictionary<String, AnyObject>)->()) {
+        let url = NSURL(string: input_url)!
+        let request = NSURLRequest(URL: url)
+        let session = NSURLSession.sharedSession()
+        
+        let task = session.dataTaskWithRequest(request) { (data, response, error) ->
+            Void in
+            
+            if error != nil {
+                print("downloadData Error: " + error.debugDescription)
+            }
+            else {
+                do {
+                    let results = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
+                    // Execute callback
+                    dispatch_async(dispatch_get_main_queue()) {
+                        print(results)
+                        callback(results!)
+                    }
+                }
+                catch {
+                    print("downloadData Error: dict Issue")
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    func streamChat(firebase_url: String) {
+        // Get a reference to our posts
+        print(firebase_url)
+        let ref = Firebase(url: firebase_url)
+        //let handle = ref.observeAuthEventWithBlock({ authData in })
+        
+        // Attach a closure to read the data at our posts reference
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            print(snapshot.value)
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+        //ref.removeAuthEventObserverWithHandle(handle)
     }
     
 }

@@ -10,6 +10,12 @@
 		9400120B1C6980E400931422 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9400120A1C6980E400931422 /* AuthViewController.swift */; };
 		943F21671BF0127D0066D5F5 /* CamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F21661BF0127D0066D5F5 /* CamCell.swift */; };
 		943F216B1BF02DC00066D5F5 /* Cam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F216A1BF02DC00066D5F5 /* Cam.swift */; };
+		94A74F0C1C727A9B004F1745 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F0B1C727A9B004F1745 /* Firebase.framework */; };
+		94A74F0E1C727AE7004F1745 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F0D1C727AE7004F1745 /* CFNetwork.framework */; };
+		94A74F101C727AF3004F1745 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F0F1C727AF3004F1745 /* Security.framework */; };
+		94A74F121C727B00004F1745 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F111C727B00004F1745 /* SystemConfiguration.framework */; };
+		94A74F141C727B19004F1745 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F131C727B19004F1745 /* libc++.tbd */; };
+		94A74F161C727B29004F1745 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F151C727B29004F1745 /* libicucore.tbd */; };
 		94AF93751BEECCE8009BAACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93741BEECCE8009BAACF /* AppDelegate.swift */; };
 		94AF93771BEECCE8009BAACF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93761BEECCE8009BAACF /* MainViewController.swift */; };
 		94AF937A1BEECCE8009BAACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94AF93781BEECCE8009BAACF /* Main.storyboard */; };
@@ -40,6 +46,12 @@
 		9400120A1C6980E400931422 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		943F21661BF0127D0066D5F5 /* CamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamCell.swift; sourceTree = "<group>"; };
 		943F216A1BF02DC00066D5F5 /* Cam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cam.swift; sourceTree = "<group>"; };
+		94A74F0B1C727A9B004F1745 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		94A74F0D1C727AE7004F1745 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		94A74F0F1C727AF3004F1745 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		94A74F111C727B00004F1745 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		94A74F131C727B19004F1745 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		94A74F151C727B29004F1745 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		94AF93711BEECCE8009BAACF /* CAM4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAM4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94AF93741BEECCE8009BAACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94AF93761BEECCE8009BAACF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +72,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A74F161C727B29004F1745 /* libicucore.tbd in Frameworks */,
+				94A74F141C727B19004F1745 /* libc++.tbd in Frameworks */,
+				94A74F121C727B00004F1745 /* SystemConfiguration.framework in Frameworks */,
+				94A74F101C727AF3004F1745 /* Security.framework in Frameworks */,
+				94A74F0E1C727AE7004F1745 /* CFNetwork.framework in Frameworks */,
+				94A74F0C1C727A9B004F1745 /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,12 @@
 		4169D894F4FDF64DE4D7677D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94A74F151C727B29004F1745 /* libicucore.tbd */,
+				94A74F131C727B19004F1745 /* libc++.tbd */,
+				94A74F111C727B00004F1745 /* SystemConfiguration.framework */,
+				94A74F0F1C727AF3004F1745 /* Security.framework */,
+				94A74F0D1C727AE7004F1745 /* CFNetwork.framework */,
+				94A74F0B1C727A9B004F1745 /* Firebase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -413,6 +437,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CAM4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cam4.tv;
@@ -428,6 +456,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CAM4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cam4.tv;
