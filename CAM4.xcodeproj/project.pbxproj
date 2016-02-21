@@ -10,18 +10,12 @@
 		9400120B1C6980E400931422 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9400120A1C6980E400931422 /* AuthViewController.swift */; };
 		943F21671BF0127D0066D5F5 /* CamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F21661BF0127D0066D5F5 /* CamCell.swift */; };
 		943F216B1BF02DC00066D5F5 /* Cam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F216A1BF02DC00066D5F5 /* Cam.swift */; };
-		94A74F0C1C727A9B004F1745 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F0B1C727A9B004F1745 /* Firebase.framework */; };
-		94A74F0E1C727AE7004F1745 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F0D1C727AE7004F1745 /* CFNetwork.framework */; };
-		94A74F101C727AF3004F1745 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F0F1C727AF3004F1745 /* Security.framework */; };
-		94A74F121C727B00004F1745 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F111C727B00004F1745 /* SystemConfiguration.framework */; };
-		94A74F141C727B19004F1745 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F131C727B19004F1745 /* libc++.tbd */; };
-		94A74F161C727B29004F1745 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74F151C727B29004F1745 /* libicucore.tbd */; };
 		94AF93751BEECCE8009BAACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93741BEECCE8009BAACF /* AppDelegate.swift */; };
 		94AF93771BEECCE8009BAACF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93761BEECCE8009BAACF /* MainViewController.swift */; };
 		94AF937A1BEECCE8009BAACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94AF93781BEECCE8009BAACF /* Main.storyboard */; };
 		94AF937C1BEECCE8009BAACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94AF937B1BEECCE8009BAACF /* Assets.xcassets */; };
-		94AF93871BEECCE8009BAACF /* CAM4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93861BEECCE8009BAACF /* CAM4Tests.swift */; };
-		94AF93921BEECCE8009BAACF /* CAM4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93911BEECCE8009BAACF /* CAM4UITests.swift */; };
+		94AF93871BEECCE8009BAACF /* CAM4TVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93861BEECCE8009BAACF /* CAM4TVTests.swift */; };
+		94AF93921BEECCE8009BAACF /* CAM4TVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF93911BEECCE8009BAACF /* CAM4TVUITests.swift */; };
 		94DBFB461C3737A300709278 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBFB451C3737A300709278 /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,23 +40,17 @@
 		9400120A1C6980E400931422 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		943F21661BF0127D0066D5F5 /* CamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamCell.swift; sourceTree = "<group>"; };
 		943F216A1BF02DC00066D5F5 /* Cam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cam.swift; sourceTree = "<group>"; };
-		94A74F0B1C727A9B004F1745 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
-		94A74F0D1C727AE7004F1745 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		94A74F0F1C727AF3004F1745 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		94A74F111C727B00004F1745 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		94A74F131C727B19004F1745 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		94A74F151C727B29004F1745 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		94AF93711BEECCE8009BAACF /* CAM4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAM4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94AF93741BEECCE8009BAACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94AF93761BEECCE8009BAACF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		94AF93791BEECCE8009BAACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94AF937B1BEECCE8009BAACF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94AF937D1BEECCE8009BAACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94AF93821BEECCE8009BAACF /* CAM4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAM4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94AF93861BEECCE8009BAACF /* CAM4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAM4Tests.swift; sourceTree = "<group>"; };
+		94AF93821BEECCE8009BAACF /* CAM4.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAM4.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94AF93861BEECCE8009BAACF /* CAM4TVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAM4TVTests.swift; sourceTree = "<group>"; };
 		94AF93881BEECCE8009BAACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94AF938D1BEECCE8009BAACF /* CAM4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAM4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94AF93911BEECCE8009BAACF /* CAM4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAM4UITests.swift; sourceTree = "<group>"; };
+		94AF938D1BEECCE8009BAACF /* CAM4.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAM4.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94AF93911BEECCE8009BAACF /* CAM4TVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAM4TVUITests.swift; sourceTree = "<group>"; };
 		94AF93931BEECCE8009BAACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DBFB451C3737A300709278 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,12 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A74F161C727B29004F1745 /* libicucore.tbd in Frameworks */,
-				94A74F141C727B19004F1745 /* libc++.tbd in Frameworks */,
-				94A74F121C727B00004F1745 /* SystemConfiguration.framework in Frameworks */,
-				94A74F101C727AF3004F1745 /* Security.framework in Frameworks */,
-				94A74F0E1C727AE7004F1745 /* CFNetwork.framework in Frameworks */,
-				94A74F0C1C727A9B004F1745 /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,12 +83,6 @@
 		4169D894F4FDF64DE4D7677D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				94A74F151C727B29004F1745 /* libicucore.tbd */,
-				94A74F131C727B19004F1745 /* libc++.tbd */,
-				94A74F111C727B00004F1745 /* SystemConfiguration.framework */,
-				94A74F0F1C727AF3004F1745 /* Security.framework */,
-				94A74F0D1C727AE7004F1745 /* CFNetwork.framework */,
-				94A74F0B1C727A9B004F1745 /* Firebase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				94AF93711BEECCE8009BAACF /* CAM4.app */,
-				94AF93821BEECCE8009BAACF /* CAM4Tests.xctest */,
-				94AF938D1BEECCE8009BAACF /* CAM4UITests.xctest */,
+				94AF93821BEECCE8009BAACF /* CAM4.xctest */,
+				94AF938D1BEECCE8009BAACF /* CAM4.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,7 +127,7 @@
 		94AF93851BEECCE8009BAACF /* CAM4Tests */ = {
 			isa = PBXGroup;
 			children = (
-				94AF93861BEECCE8009BAACF /* CAM4Tests.swift */,
+				94AF93861BEECCE8009BAACF /* CAM4TVTests.swift */,
 				94AF93881BEECCE8009BAACF /* Info.plist */,
 			);
 			path = CAM4Tests;
@@ -160,7 +136,7 @@
 		94AF93901BEECCE8009BAACF /* CAM4UITests */ = {
 			isa = PBXGroup;
 			children = (
-				94AF93911BEECCE8009BAACF /* CAM4UITests.swift */,
+				94AF93911BEECCE8009BAACF /* CAM4TVUITests.swift */,
 				94AF93931BEECCE8009BAACF /* Info.plist */,
 			);
 			path = CAM4UITests;
@@ -201,7 +177,7 @@
 			);
 			name = CAM4Tests;
 			productName = CAM4Tests;
-			productReference = 94AF93821BEECCE8009BAACF /* CAM4Tests.xctest */;
+			productReference = 94AF93821BEECCE8009BAACF /* CAM4.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		94AF938C1BEECCE8009BAACF /* CAM4UITests */ = {
@@ -219,7 +195,7 @@
 			);
 			name = CAM4UITests;
 			productName = CAM4UITests;
-			productReference = 94AF938D1BEECCE8009BAACF /* CAM4UITests.xctest */;
+			productReference = 94AF938D1BEECCE8009BAACF /* CAM4.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -310,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94AF93871BEECCE8009BAACF /* CAM4Tests.swift in Sources */,
+				94AF93871BEECCE8009BAACF /* CAM4TVTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94AF93921BEECCE8009BAACF /* CAM4UITests.swift in Sources */,
+				94AF93921BEECCE8009BAACF /* CAM4TVUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +420,7 @@
 				INFOPLIST_FILE = CAM4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cam4.tv;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CAM4;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -463,7 +439,7 @@
 				INFOPLIST_FILE = CAM4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cam4.tv;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CAM4;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -475,7 +451,7 @@
 				INFOPLIST_FILE = CAM4Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryanmaule.CAM4Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CAM4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAM4.app/CAM4";
 			};
 			name = Debug;
@@ -487,7 +463,7 @@
 				INFOPLIST_FILE = CAM4Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryanmaule.CAM4Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CAM4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAM4.app/CAM4";
 			};
 			name = Release;
@@ -498,7 +474,7 @@
 				INFOPLIST_FILE = CAM4UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryanmaule.CAM4UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CAM4;
 				TEST_TARGET_NAME = CAM4;
 				USES_XCTRUNNER = YES;
 			};
@@ -510,7 +486,7 @@
 				INFOPLIST_FILE = CAM4UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryanmaule.CAM4UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CAM4;
 				TEST_TARGET_NAME = CAM4;
 				USES_XCTRUNNER = YES;
 			};

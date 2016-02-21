@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CAM4.xcodeproj">
+      location = "self:/Users/ryan/Dropbox/XCode Projects/CAM4/CAM4.xcodeproj">
    </FileRef>
 </Workspace>

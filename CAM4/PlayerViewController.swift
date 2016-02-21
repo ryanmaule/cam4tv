@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import AVKit
 import AVFoundation
-import Firebase
 
 class PlayerViewController: UIViewController {
 
@@ -111,6 +110,7 @@ class PlayerViewController: UIViewController {
         self.view.addSubview(overlayView)
         
         player.play()
+        player.play()
     }
     
     func downloadData(input_url: String) {
@@ -168,21 +168,6 @@ class PlayerViewController: UIViewController {
             }
         }
         task.resume()
-    }
-    
-    func streamChat(firebase_url: String) {
-        // Get a reference to our posts
-        print(firebase_url)
-        let ref = Firebase(url: firebase_url)
-        //let handle = ref.observeAuthEventWithBlock({ authData in })
-        
-        // Attach a closure to read the data at our posts reference
-        ref.observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot.value)
-            }, withCancelBlock: { error in
-                print(error.description)
-        })
-        //ref.removeAuthEventObserverWithHandle(handle)
     }
     
 }

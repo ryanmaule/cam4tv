@@ -37,6 +37,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var trendingCams = [Cam]()
     var localCams = [Cam]()
     
+    let pubnub_url = "http://dylan.ryanmaule.com/cam4tv/api/devices/session.php"
+    
     let URL_BASE_TRENDING = "https://api.import.io/store/data/e9c58785-d16f-4061-89a7-1833b940cf0e/_query?input/webpage/url=http%3A%2F%2Fwww.cam4.com%2F&_user=009709b7-5e61-4d47-99af-1403f3acaa88&_apikey=009709b75e614d4799af1403f3acaa884dbbb1c097366f504221fdb3c73b69057368743e61de127ae810cd55c2f92ee0cbd27125a9af044d43323c8f65a6c286f8674935dc940ab67af26c711fc9bbe3"
     
     let URL_BASE_LOCAL = "https://api.import.io/store/data/e9c58785-d16f-4061-89a7-1833b940cf0e/_query?input/webpage/url=http%3A%2F%2Fwww.cam4.com%2Fcanada-cams&_user=009709b7-5e61-4d47-99af-1403f3acaa88&_apikey=009709b75e614d4799af1403f3acaa884dbbb1c097366f504221fdb3c73b69057368743e61de127ae810cd55c2f92ee0cbd27125a9af044d43323c8f65a6c286f8674935dc940ab67af26c711fc9bbe3"
@@ -60,6 +62,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Set timer to refresh data
         self.update()
         NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "update", userInfo: nil, repeats: true)
+        
+        downloadData(self.pubnub_url+"?current_view=Directory&auth_code="+auth_code)
     }
     
     func setupApp() {
@@ -126,11 +130,11 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func update() {
         // Reload content arrays for each collection
-        downloadData(URL_BASE_TRENDING, collectionView: trendingCollectionView)
-        downloadData(URL_BASE_LOCAL, collectionView: localCollectionView)
+        downloadCams(URL_BASE_TRENDING, collectionView: trendingCollectionView)
+        downloadCams(URL_BASE_LOCAL, collectionView: localCollectionView)
     }
     
-    func downloadData(input_url: String, collectionView: UICollectionView) {
+    func downloadCams(input_url: String, collectionView: UICollectionView) {
         let url = NSURL(string: input_url)!
         let request = NSURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
@@ -167,6 +171,35 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
                         dispatch_async(dispatch_get_main_queue()) {
                             collectionView.reloadData()
                         }
+                    }
+                }
+                catch {
+                    print("downloadData Error: dict Issue")
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    func downloadData(input_url: String) {
+        let url = NSURL(string: input_url)!
+        let request = NSURLRequest(URL: url)
+        let session = NSURLSession.sharedSession()
+        
+        print(input_url)
+        
+        let task = session.dataTaskWithRequest(request) { (data, response, error) ->
+            Void in
+            
+            if error != nil {
+                print("downloadData Error: " + error.debugDescription)
+            }
+            else {
+                do {
+                    let results = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary<String, AnyObject>
+                    // Execute callback
+                    dispatch_async(dispatch_get_main_queue()) {
+                        print(results)
                     }
                 }
                 catch {

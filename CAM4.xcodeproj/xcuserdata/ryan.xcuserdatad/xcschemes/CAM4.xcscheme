@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "94AF93811BEECCE8009BAACF"
-               BuildableName = "CAM4Tests.xctest"
+               BuildableName = "CAM4.xctest"
                BlueprintName = "CAM4Tests"
                ReferencedContainer = "container:CAM4.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "94AF938C1BEECCE8009BAACF"
-               BuildableName = "CAM4UITests.xctest"
+               BuildableName = "CAM4.xctest"
                BlueprintName = "CAM4UITests"
                ReferencedContainer = "container:CAM4.xcodeproj">
             </BuildableReference>
